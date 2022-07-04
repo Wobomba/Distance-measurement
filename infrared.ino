@@ -4,7 +4,7 @@ int val = 0;                 // variable to store the values from sensor(initial
 
 void setup()
 {
-//  pinMode(led,OUTPUT);
+  pinMode(led,OUTPUT);
 //  pinMode(sensor,INPUT);
   Serial.begin(9600);
 }
@@ -14,18 +14,10 @@ void loop()
   val = analogRead(sensor);       // reads the value of the sharp sensor
   Serial.println(val);     
    delay(100); 
-//  if (digitalRead(sensor)== LOW)
-//  {
-//    digitalWrite(led,HIGH);
-//    
-//    delay(10);
-//  }
-//  else 
-//  {
-//    
-//    digitalWrite(led,LOW);
-//    delay(10);
-//    
-//  }
-  
+
+   if(val <= 20){
+    digitalWrite(led,HIGH);
+   }else{
+    digitalWrite(led,LOW);
+   }  
 }
