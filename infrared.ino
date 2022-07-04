@@ -15,7 +15,7 @@ void loop()
   Serial.println(val);     
    delay(100); 
 
-   if(val <= 20){
+   if(val <= 253){
     digitalWrite(led,HIGH);
    }else{
     digitalWrite(led,LOW);
