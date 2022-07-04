@@ -5,7 +5,6 @@ int val = 0;                 // variable to store the values from sensor(initial
 void setup()
 {
   pinMode(led,OUTPUT);
-//  pinMode(sensor,INPUT);
   Serial.begin(9600);
 }
 void loop()
